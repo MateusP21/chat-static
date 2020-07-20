@@ -219,7 +219,10 @@ header h1 span {
     .row-1 {
         justify-content: center;
     }
-    .row-2,.row-3 {
+    .row-2 {
+        display: none;
+    }
+    .row-3 {
         justify-self: center;
     }
     header h1 {
