@@ -1,0 +1,246 @@
+@import url('https://css.gg/c?=|gg-software-download|icon-name|icon-name');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #9cd0ee;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #9cd0ee);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdf2f3, #9cd0ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: top;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.chat {
+    background: white;
+    height: max-content;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+header {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo img {
+    width: 100%;
+}
+header h1 span {
+    text-transform: uppercase;
+}
+
+.row-1 {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: flex-start;
+    align-items: center;
+    grid-gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.row-1 .search {
+    border: none;
+    background: rgb(238, 238, 238);
+    padding: 8px;
+    width: 250px;
+}
+.row-2 {
+    justify-self: center;
+}
+
+.row-3 {
+    justify-self: flex-end;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
+.row-3 a {
+    color: #bfbfbf;
+    
+}
+.messager {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.friends-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 400px;
+}
+
+.friends-list li {
+    border-bottom: 1px solid #eee;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 15px;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.1s;
+    background: transparent;
+}
+
+.friends-list li:hover {
+    background-color: rgb(236, 240, 240);
+    cursor: pointer;
+  
+    
+}
+
+.friends-list .status {
+    font-size: 12px;
+    color: gray;
+}
+.avatar img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.conversation {
+    background: rgb(240, 240, 240);
+    display: grid;
+    grid-template-rows: 3fr max-content;
+}
+
+.conversation .send-message {
+    background: white;
+    padding: 10px;
+    display: flex;
+}
+
+.conversation input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    
+}
+
+.conversation button {
+    border: none;
+    background-color: rgb(234, 240, 236);
+    padding: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.conversation-box {
+    padding: 10px;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-gap: 10px;
+    overflow: auto;
+    max-height: 400px;
+}
+
+.friend-message,.user-message {
+    display: grid;
+    align-items: flex-start;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-auto-columns: max-content;
+    grid-gap:10px;
+    
+}
+
+.friend-message p , .user-message p  {
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    justify-content: flex-end;
+    
+}
+
+.user-message p {
+    background: purple;
+    color: white;
+}   
+.user-message .avatar {
+    order: 1;
+}
+
+.fullscreen {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 100px 3fr;
+}
+
+@media screen and (max-width: 765px) {
+    body {
+      background-color: lightgreen;
+    }
+
+    #full {
+        display: none;
+    }
+
+    header {
+        margin-top: 50px;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 10px;
+    }
+    .row-1 {
+        justify-content: center;
+    }
+    .row-2,.row-3 {
+        justify-self: center;
+    }
+    header h1 {
+        font-size: 18px;
+    }
+    .messager {
+        grid-template-rows: max-content 2fr;
+        grid-template-columns: none;
+    }
+
+    .friends-list ul {
+        display: grid;
+        grid-auto-flow: column;
+        overflow: auto;
+    }
+
+    .friends-list li {
+        width: 80px;
+    }
+
+    .friend-info, .offline-time {
+        display: none;
+    }
+  }
